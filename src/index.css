@@ -1,0 +1,128 @@
+body {
+  background: linear-gradient(
+    90deg,
+    rgb(109, 109, 109),
+    rgb(0, 0, 0),
+    rgb(0, 0, 0),
+    rgb(0, 0, 0),
+    rgb(109, 109, 109)
+  );
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+#root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color: rgb(255, 253, 253);
+}
+
+#header {
+  text-align: center;
+}
+
+#machine-container {
+  border: 2px solid rgba(255, 255, 255, 0.651);
+  border-radius: 20px;
+  padding: 20px;
+  display: block; /* Display block because I want timer underneath the break-session-container */
+}
+#break-session-containter {
+  width: 400px;
+  display: flex; /* This way the break lenght container and session length container are side by side */
+}
+
+/* Break length styles */
+
+#break-length-container {
+  width: 220px;
+  text-align: center; /* Aligns buttons and header to center horizontally. */
+}
+
+#break-label {
+  font-size: 20px;
+}
+
+#session-label {
+  font-size: 20px;
+}
+
+button {
+  /* Decorates buttons (arrows)*/
+  background: none;
+  outline: none;
+  border: none;
+  color: rgb(0, 3, 173);
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.break-session-number {
+  font-size: 25px;
+  padding: 4px;
+}
+
+/*Session length style (some styles are same as break length with classes and button^) */
+
+#session-length-container {
+  width: 220px;
+  text-align: center; /* Aligns buttons and header to center horizontally. */
+  margin-left: auto; /* In flex this is the equivalent to float right. This makes the Session div go to the right of the break-session-container */
+}
+
+#timer-container {
+  display: flex; /* Aligns the timer div to the center*/
+  align-items: center;
+  justify-content: center;
+}
+
+#timer-div {
+  border: 6px solid rgb(109, 109, 109);
+  border-radius: 40px;
+  width: 200px;
+  padding-bottom: 15px;
+  text-align: center; /* Aligns header and timer centered vertically and horizontally */
+  display: flex;
+  align-items: center;
+  flex-direction: column; /* Puts timer underneath header instead of beside*/
+}
+
+#timer-label {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+#time-left {
+  margin-top: -10px;
+  font-size: 64px;
+}
+
+/* Timer controls style section */
+#timer-controls-container {
+  margin-top: 5px;
+  text-align: center;
+}
+
+/* Credit style section */
+
+#credit-container {
+  margin-top: 5px;
+  text-align: center;
+  font-size: 14px;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(0, 3, 173);
+}
